@@ -1,0 +1,24 @@
+.serach-wrapper {
+  display: grid;
+  grid-template-columns: 90% 10%;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--color-dark);
+  width: 100%;
+}
+
+.search {
+  margin-right: 0.7rem;
+}
+
+.search>input {
+  background-color: var(--color-bg);
+  color: var(--color-light);
+  padding: 0.6rem;
+  font-family: 'PT Sans Caption', sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+input {
+  width: 100%;
+}

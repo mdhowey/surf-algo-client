@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css';
+import EditProfile from './components/EditProfile/EditProfile';
+import Login from './pages/Login/Login';
+import Profile from './pages/Profile/Profile';
+import ProfileFeed from './pages/ProfileFeed/ProfileFeed';
+import Register from './pages/Register/Register';
+import Layout from './pages/Layout/Layout';
+import Message from './pages/Message/Message';
+import NoPage from './pages/NoPage/NoPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<Login />} />
+          <Route path='register' element={<Register />} />
+          <Route path='edit' element={<EditProfile />} />
+          <Route path='feed' element={<ProfileFeed />} />
+          <Route path='profile/' element={<Profile />} />
+          <Route path='message' element={<Message />} />
+          <Route path='*' element={<NoPage />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 

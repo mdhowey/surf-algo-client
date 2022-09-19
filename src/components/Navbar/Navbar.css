@@ -1,0 +1,74 @@
+.navbar-wrapper {
+  display: grid;
+  grid-template-columns: 20% 60% 15% 5%;
+  align-items: center;
+  background-color: var(--color-dark);
+  padding: 0 1.5rem;
+}
+
+.chat-username-wrapper {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+}
+
+.chat-username-wrapper>span {
+  margin: 0 1rem;
+}
+
+.chat-icon {
+  font-size: 1.5rem;
+}
+
+.avatar {
+  font-size: 2rem;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  justify-self: end;
+  transition: var(--transition);
+}
+
+.drop-btn {
+  background-color: transparent;
+  color: var(--color-primary);
+  padding: 0;
+  width: 1rem;
+}
+
+.drop-btn:hover {
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--color-dark);
+  right: 0;
+  padding: 1rem 2rem;
+  min-width: 8rem;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content>li>a {
+  display: block;
+  margin: 1rem 0;
+}
+
+nav {
+  background-color: var(--color-dark);
+}
+
+nav>ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
